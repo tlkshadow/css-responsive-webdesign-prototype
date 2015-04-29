@@ -1,0 +1,109 @@
+@media screen and (min-width: 1000px) {
+  .col-container {
+    display: flex;
+    flex-flow: row nowrap;
+
+    & .col {
+      &.middle {
+        width: 70%;
+        order: 2;
+      }
+      &.left {
+        width: 30%;
+        order: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .element {
+    & a {
+      padding: 10px 20px;
+
+      & p {
+        padding: 0;
+      }
+
+      & h3 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    @include box-shadow(1px 1px 5px #555);
+
+    & nav {
+      & li {
+        & a {
+          padding: 10px ;
+          &:hover {
+            color: #ffffff;
+            background-color: $linkHoverColor;
+          }
+        }
+      }
+    }
+  }
+
+  .element {
+    display: flex;
+    flex-flow: row nowrap;
+
+    & h3 {
+      padding: 0 5px;
+    }
+
+    & a {
+      background-color: $elementBackgroundColor;
+      @include box-shadow(1px 1px 1px #ddd);
+    }
+  }
+  .page {
+    background-color: $backgroundColor;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  nav {
+    & ul {
+      text-align: center;
+      & li {
+        & a {
+          & span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  nav {
+    & ul {
+      text-align: center;
+      & li {
+        display: block;
+        & a {
+          & span {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
