@@ -1,0 +1,171 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: grey;
+  margin: 0px;
+  padding: 0px;
+  background: #EEEEEE; }
+
+.page {
+  background-color: #ffffff;
+  max-width: 1232px; }
+
+a {
+  color: #333333;
+  text-decoration: none;
+  -webkit-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms; }
+  a img {
+    width: 100%; }
+  a:hover {
+    color: #ED1A3B; }
+    a:hover p::after {
+      -webkit-transition: color 500ms;
+      -moz-transition: color 500ms;
+      -ms-transition: color 500ms;
+      -o-transition: color 500ms;
+      transition: color 500ms;
+      color: #333333; }
+
+footer {
+  max-width: 1172px;
+  padding: 20px;
+  background: #ED1A3B;
+  color: #ffffff; }
+  footer p {
+    margin: 0px;
+    padding: 0px; }
+
+nav {
+  max-width: 1222px; }
+  nav ul {
+    text-align: right;
+    margin: 0px;
+    padding: 0px; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li a {
+        display: inline-block;
+        padding: 4px 2px; }
+
+.col-container {
+  padding-top: 60px;
+  display: block; }
+
+.element {
+  padding: 0 20px;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms; }
+  .element.double a {
+    width: 49%; }
+    .element.double a:first-child {
+      margin-right: 2%; }
+  .element.tripple a {
+    width: 32%;
+    margin-right: 0; }
+    .element.tripple a:nth-child(1) {
+      order: 3; }
+    .element.tripple a:nth-child(2) {
+      order: 2;
+      margin-right: 2%;
+      margin-left: 2%; }
+    .element.tripple a:nth-child(3) {
+      order: 1; }
+  .element h3 {
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms; }
+    .element h3:first-child {
+      margin: 10px 0; }
+  .element img + h3 {
+    margin: 5px 0;
+    text-transform: uppercase;
+    color: #ED1A3B; }
+  .element p {
+    padding: 0px 5px;
+    margin: 0 0 5px 0;
+    text-align: justify; }
+    .element p::after {
+      content: "❱";
+      padding-left: 5px;
+      color: #ED1A3B; }
+  .element a {
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    margin-bottom: 25px;
+    min-height: 100%; }
+
+@media screen and (min-width: 1000px) {
+  .col-container {
+    display: flex;
+    flex-flow: row nowrap; }
+    .col-container .col.middle {
+      width: 70%;
+      order: 2; }
+    .col-container .col.left {
+      width: 30%;
+      order: 1; } }
+@media screen and (min-width: 640px) {
+  .element a {
+    padding: 10px 20px; }
+    .element a p {
+      padding: 0; }
+    .element a h3 {
+      padding-left: 0;
+      padding-right: 0; } }
+@media screen and (min-width: 480px) {
+  header {
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    -webkit-box-shadow: 1px 1px 5px #555;
+    -moz-box-shadow: 1px 1px 5px #555;
+    box-shadow: 1px 1px 5px #555; }
+    header nav li a {
+      padding: 10px; }
+      header nav li a:hover {
+        color: #ffffff;
+        background-color: #ED1A3B; }
+
+  .element {
+    display: flex;
+    flex-flow: row nowrap; }
+    .element h3 {
+      padding: 0 5px; }
+    .element a {
+      background-color: #ffffff;
+      -webkit-box-shadow: 1px 1px 1px #ddd;
+      -moz-box-shadow: 1px 1px 1px #ddd;
+      box-shadow: 1px 1px 1px #ddd; }
+
+  .page {
+    background-color: #EEEEEE; } }
+@media screen and (max-width: 480px) {
+  header {
+    padding: 20px; } }
+@media screen and (max-width: 385px) {
+  nav ul {
+    text-align: center; }
+    nav ul li a span {
+      display: none; } }
+@media screen and (max-width: 340px) {
+  nav ul {
+    text-align: center; }
+    nav ul li {
+      display: block; }
+      nav ul li a span {
+        display: inline; } }
+
+/*# sourceMappingURL=prototype.scss.css.map */

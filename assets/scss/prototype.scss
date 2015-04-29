@@ -1,0 +1,140 @@
+$baseFontSize: 16px;
+$backgroundColor: #EEEEEE;
+$elementBackgroundColor: #ffffff;
+$arrowRight: '❱';
+$arrowLeft: '❰';
+$linkColor: #333333;
+$linkHoverColor: #ED1A3B;
+$pageMaxWidth: 1232px;
+
+@import 'mixins';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $baseFontSize;
+  background: grey;
+  margin: 0px;
+  padding: 0px;
+  background: $backgroundColor;
+}
+
+.page {
+  background-color: $elementBackgroundColor;
+  max-width: $pageMaxWidth;
+}
+
+a {
+  & img {
+    width: 100%;
+  }
+  color: $linkColor;
+  text-decoration: none;
+  @include transition(color 500ms);
+  &:hover {
+    color: $linkHoverColor;
+    & p {
+      &::after {
+        @include transition(color 500ms);
+        color: $linkColor;
+      }
+    }
+  }
+}
+
+footer {
+  max-width: $pageMaxWidth - 60;
+  padding: 20px;
+  background: $linkHoverColor;
+  color: #ffffff;
+  & p {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+nav {
+  max-width: $pageMaxWidth - 10;
+  & ul {
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+
+    & li {
+      display: inline-block;
+      & a {
+        display: inline-block;
+        padding: 4px 2px;
+      }
+    }
+  }
+}
+
+.col-container {
+  padding-top: 60px;
+  display: block;
+}
+
+.element {
+  padding: 0 20px;
+  @include transition(all 500ms);
+
+  &.double {
+    & a {
+      width: 49%;
+      &:first-child {
+        margin-right: 2%;
+      }
+    }
+  }
+
+  &.tripple {
+    & a {
+      width: 32%;
+      margin-right: 0;
+
+      &:nth-child(1) {
+        order: 3;
+      }
+      &:nth-child(2) {
+        order: 2;
+        margin-right: 2%;
+        margin-left: 2%;
+      }
+      &:nth-child(3) {
+        order: 1;
+      }
+    }
+  }
+
+  & h3 {
+    @include transition(all 500ms);
+    &:first-child {
+      margin: 10px 0;
+    }
+  }
+
+  & img + h3 {
+    margin: 5px 0;
+    text-transform: uppercase;
+    color: $linkHoverColor;
+  }
+
+  & p {
+    padding: 0px 5px;
+    margin: 0 0 5px 0;
+    text-align: justify;
+
+    &::after {
+      content: $arrowRight;
+      padding-left: 5px;
+      color: $linkHoverColor;
+    }
+  }
+  & a {
+    @include transition(all 500ms);
+    margin-bottom: 25px;
+    min-height: 100%;
+  }
+}
+
+@import 'media-queries';
